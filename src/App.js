@@ -1,9 +1,11 @@
-import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      How we work Blog Account View plans Humanizing your insurance. Get your
+      <Header />
+
+      {/* Humanizing your insurance. Get your
       life insurance coverage easier and faster. We blend our expertise and
       technology to help you find the plan that’s right for you. Ensure you and
       your loved ones are protected. View plans We’re different Snappy Process
@@ -15,7 +17,7 @@ function App() {
       when you need it. Find out more about how we work How we work Our company
       How we work Why Insure? View plans Reviews Help me FAQ Terms of use
       Privacy policy Cookies Contact Sales Support Live chat Others Careers
-      Press Licenses
+      Press Licenses */}
     </>
   );
 }

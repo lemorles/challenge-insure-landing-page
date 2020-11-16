@@ -1,0 +1,107 @@
+.header {
+  padding: 20px;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  height: 18px;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__nav-hamburger {
+  width: 30px;
+  height: 30px;
+  background: url("../../images/icon-hamburger.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#checkbox-nav {
+  display: none;
+}
+
+#checkbox-nav:checked ~ nav {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--very-dark-violet);
+  padding: 50px 30px 0 30px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(100vh);
+}
+
+#checkbox-nav:checked ~ nav > a {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-size: 18rem;
+}
+
+#checkbox-nav:checked ~ nav > .header__nav-button {
+  border: 1px solid #ffffff;
+  padding: 15px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: block;
+  }
+
+  #checkbox-nav:checked ~ nav {
+    display: block;
+    position: relative;
+    height: auto;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  #checkbox-nav:checked ~ nav > a {
+    display: inline;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12rem;
+    color: var(--dark-grayish-violet);
+  }
+
+  #checkbox-nav:checked ~ nav > .header__nav-button {
+    color: var(--very-dark-violet);
+    border: 2px solid var(--very-dark-violet);
+    padding: 8px 15px;
+  }
+
+  .header__nav-hamburger {
+    display: none;
+  }
+
+  .header__nav a {
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: var(--dark-grayish-violet);
+    font-size: 12rem;
+    font-weight: 600;
+  }
+
+  .header__nav .header__nav-button {
+    color: var(--very-dark-violet);
+    border: 2px solid var(--very-dark-violet);
+    padding: 8px 15px;
+  }
+}
